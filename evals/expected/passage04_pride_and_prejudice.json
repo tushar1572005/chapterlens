@@ -1,0 +1,100 @@
+{
+  "id": "passage04_pride_and_prejudice",
+  "filename": "passage04_pride_and_prejudice.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 84.21,
+    "fleschKincaidGrade": 4.63,
+    "words": 301,
+    "sentences": 24
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 79.5,
+      "fkGrade": 6.8,
+      "label": "Fairly Easy"
+    },
+    "stats": {
+      "sentences": 16,
+      "words": 301,
+      "paragraphs": 16
+    },
+    "top5SentenceIds": [
+      "s1",
+      "s4",
+      "s0",
+      "s3",
+      "s2"
+    ],
+    "hardest": [
+      {
+        "id": "s1",
+        "score": 80.2,
+        "metrics": {
+          "words": 68,
+          "avgSyllables": 1.34,
+          "longWords": 8,
+          "commas": 4
+        },
+        "text": "However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.\n\n\"My dear Mr. Bennet,\" said his lady to him one day, \"have you heard that Netherfield Park is let at last?\""
+      },
+      {
+        "id": "s4",
+        "score": 78.7,
+        "metrics": {
+          "words": 83,
+          "avgSyllables": 1.29,
+          "longWords": 5,
+          "commas": 6
+        },
+        "text": "This was invitation enough.\n\n\"Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week.\""
+      },
+      {
+        "id": "s0",
+        "score": 51.8,
+        "metrics": {
+          "words": 23,
+          "avgSyllables": 1.39,
+          "longWords": 2,
+          "commas": 2
+        },
+        "text": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife."
+      },
+      {
+        "id": "s3",
+        "score": 51.4,
+        "metrics": {
+          "words": 32,
+          "avgSyllables": 1.28,
+          "longWords": 2,
+          "commas": 1
+        },
+        "text": "Mr. Bennet made no answer.\n\n\"Do you not want to know who has taken it?\" cried his wife impatiently.\n\n\"You want to tell me, and I have no objection to hearing it.\""
+      },
+      {
+        "id": "s2",
+        "score": 37.3,
+        "metrics": {
+          "words": 26,
+          "avgSyllables": 1.15,
+          "longWords": 0,
+          "commas": 2
+        },
+        "text": "Mr. Bennet replied that he had not.\n\n\"But it is,\" returned she; \"for Mrs. Long has just been here, and she told me all about it.\""
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 4.71,
+    "fkgDiff": 2.17,
+    "sentenceCountDiff": -8,
+    "segmentationAligned": false,
+    "notes": "Sentence count diverged (our Intl.Segmenter: 16, textstat regex: 24) due to dialogue quotes/abbreviations."
+  }
+}

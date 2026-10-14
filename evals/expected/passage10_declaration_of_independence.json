@@ -1,0 +1,100 @@
+{
+  "id": "passage10_declaration_of_independence",
+  "filename": "passage10_declaration_of_independence.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 24.15,
+    "fleschKincaidGrade": 22.15,
+    "words": 296,
+    "sentences": 6
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 13.2,
+      "fkGrade": 26.3,
+      "label": "Very Difficult"
+    },
+    "stats": {
+      "sentences": 5,
+      "words": 299,
+      "paragraphs": 3
+    },
+    "top5SentenceIds": [
+      "s3",
+      "s1",
+      "s2",
+      "s0",
+      "s4"
+    ],
+    "hardest": [
+      {
+        "id": "s3",
+        "score": 89.2,
+        "metrics": {
+          "words": 45,
+          "avgSyllables": 1.64,
+          "longWords": 8,
+          "commas": 5
+        },
+        "text": "But when a long train of abuses and usurpations, pursuing invariably the same Object evinces a design to reduce them under absolute Despotism, it is their right, it is their duty, to throw off such Government, and to provide new Guards for their future security."
+      },
+      {
+        "id": "s1",
+        "score": 87.1,
+        "metrics": {
+          "words": 111,
+          "avgSyllables": 1.57,
+          "longWords": 20,
+          "commas": 11
+        },
+        "text": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.—That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed,—That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness."
+      },
+      {
+        "id": "s2",
+        "score": 87.1,
+        "metrics": {
+          "words": 47,
+          "avgSyllables": 1.57,
+          "longWords": 7,
+          "commas": 5
+        },
+        "text": "Prudence, indeed, will dictate that Governments long established should not be changed for light and transient causes; and accordingly all experience hath shewn, that mankind are more disposed to suffer, while evils are sufferable, than to right themselves by abolishing the forms to which they are accustomed."
+      },
+      {
+        "id": "s0",
+        "score": 86.2,
+        "metrics": {
+          "words": 71,
+          "avgSyllables": 1.54,
+          "longWords": 8,
+          "commas": 4
+        },
+        "text": "When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation."
+      },
+      {
+        "id": "s4",
+        "score": 58.7,
+        "metrics": {
+          "words": 25,
+          "avgSyllables": 1.56,
+          "longWords": 4,
+          "commas": 0
+        },
+        "text": "Such has been the patient sufferance of these Colonies; and such is now the necessity which constrains them to alter their former Systems of Government."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 10.95,
+    "fkgDiff": 4.15,
+    "sentenceCountDiff": -1,
+    "segmentationAligned": true,
+    "notes": "Sentence segmentation aligned closely with reference."
+  }
+}

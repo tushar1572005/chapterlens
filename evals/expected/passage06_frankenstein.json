@@ -1,0 +1,100 @@
+{
+  "id": "passage06_frankenstein",
+  "filename": "passage06_frankenstein.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 55.47,
+    "fleschKincaidGrade": 12.37,
+    "words": 303,
+    "sentences": 11
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 60.7,
+      "fkGrade": 10.6,
+      "label": "Standard"
+    },
+    "stats": {
+      "sentences": 13,
+      "words": 306,
+      "paragraphs": 3
+    },
+    "top5SentenceIds": [
+      "s2",
+      "s7",
+      "s1",
+      "s3",
+      "s12"
+    ],
+    "hardest": [
+      {
+        "id": "s2",
+        "score": 82.6,
+        "metrics": {
+          "words": 50,
+          "avgSyllables": 1.42,
+          "longWords": 5,
+          "commas": 5
+        },
+        "text": "It was already one in the morning; the rain pattered dismally against the panes, and my candle was nearly burnt out, when, by the glimmer of the half-extinguished light, I saw the dull yellow eye of the creature open; it breathed hard, and a convulsive motion agitated its limbs."
+      },
+      {
+        "id": "s7",
+        "score": 82.3,
+        "metrics": {
+          "words": 64,
+          "avgSyllables": 1.41,
+          "longWords": 4,
+          "commas": 3
+        },
+        "text": "His yellow skin scarcely covered the work of muscles and arteries beneath; his hair was of a lustrous black, and flowing; his teeth of a pearly whiteness; but these luxuriances only formed a more horrid contrast with his watery eyes, that seemed almost of the same colour as the dun-white sockets in which they were set, his shrivelled complexion and straight black lips."
+      },
+      {
+        "id": "s1",
+        "score": 73.3,
+        "metrics": {
+          "words": 33,
+          "avgSyllables": 1.48,
+          "longWords": 5,
+          "commas": 2
+        },
+        "text": "With an anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that lay at my feet."
+      },
+      {
+        "id": "s3",
+        "score": 61.6,
+        "metrics": {
+          "words": 26,
+          "avgSyllables": 1.46,
+          "longWords": 5,
+          "commas": 1
+        },
+        "text": "How can I describe my emotions at this catastrophe, or how delineate the wretch whom with such infinite pains and care I had endeavoured to form?"
+      },
+      {
+        "id": "s12",
+        "score": 61.6,
+        "metrics": {
+          "words": 26,
+          "avgSyllables": 1.46,
+          "longWords": 4,
+          "commas": 1
+        },
+        "text": "Unable to endure the aspect of the being I had created, I rushed out of the room and continued a long time traversing my bed-chamber."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 5.23,
+    "fkgDiff": 1.77,
+    "sentenceCountDiff": 2,
+    "segmentationAligned": false,
+    "notes": "Sentence count diverged (our Intl.Segmenter: 13, textstat regex: 11) due to dialogue quotes/abbreviations."
+  }
+}

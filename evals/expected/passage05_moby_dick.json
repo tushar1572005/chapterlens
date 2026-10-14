@@ -1,0 +1,100 @@
+{
+  "id": "passage05_moby_dick",
+  "filename": "passage05_moby_dick.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 59.92,
+    "fleschKincaidGrade": 9.7,
+    "words": 309,
+    "sentences": 16
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 60.4,
+      "fkGrade": 10.1,
+      "label": "Standard"
+    },
+    "stats": {
+      "sentences": 15,
+      "words": 315,
+      "paragraphs": 2
+    },
+    "top5SentenceIds": [
+      "s3",
+      "s1",
+      "s10",
+      "s8",
+      "s14"
+    ],
+    "hardest": [
+      {
+        "id": "s3",
+        "score": 88,
+        "metrics": {
+          "words": 87,
+          "avgSyllables": 1.6,
+          "longWords": 12,
+          "commas": 5
+        },
+        "text": "Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off—then, I account it high time to get to sea as soon as I can."
+      },
+      {
+        "id": "s1",
+        "score": 77.9,
+        "metrics": {
+          "words": 40,
+          "avgSyllables": 1.43,
+          "longWords": 4,
+          "commas": 2
+        },
+        "text": "Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world."
+      },
+      {
+        "id": "s10",
+        "score": 58.8,
+        "metrics": {
+          "words": 29,
+          "avgSyllables": 1.28,
+          "longWords": 2,
+          "commas": 3
+        },
+        "text": "Its extreme downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few hours previous were out of sight of land."
+      },
+      {
+        "id": "s8",
+        "score": 55.1,
+        "metrics": {
+          "words": 25,
+          "avgSyllables": 1.44,
+          "longWords": 3,
+          "commas": 1
+        },
+        "text": "There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral reefs—commerce surrounds it with her surf."
+      },
+      {
+        "id": "s14",
+        "score": 50.7,
+        "metrics": {
+          "words": 23,
+          "avgSyllables": 1.52,
+          "longWords": 2,
+          "commas": 1
+        },
+        "text": "What do you see?—Posted like silent sentinels all around the town, stand thousands upon thousands of mortal men fixed in ocean reveries."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 0.48,
+    "fkgDiff": 0.4,
+    "sentenceCountDiff": -1,
+    "segmentationAligned": true,
+    "notes": "Sentence segmentation aligned closely with reference."
+  }
+}

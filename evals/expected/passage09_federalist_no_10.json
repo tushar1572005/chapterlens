@@ -1,0 +1,100 @@
+{
+  "id": "passage09_federalist_no_10",
+  "filename": "passage09_federalist_no_10.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 23.73,
+    "fleschKincaidGrade": 20.27,
+    "words": 374,
+    "sentences": 9
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 23.5,
+      "fkGrade": 20.3,
+      "label": "Very Difficult"
+    },
+    "stats": {
+      "sentences": 9,
+      "words": 374,
+      "paragraphs": 2
+    },
+    "top5SentenceIds": [
+      "s3",
+      "s4",
+      "s5",
+      "s7",
+      "s0"
+    ],
+    "hardest": [
+      {
+        "id": "s3",
+        "score": 97.3,
+        "metrics": {
+          "words": 45,
+          "avgSyllables": 1.91,
+          "longWords": 14,
+          "commas": 5
+        },
+        "text": "The instability, injustice, and confusion introduced into the public councils, have, in truth, been the mortal diseases under which popular governments have everywhere perished; as they continue to be the favorite and fruitful topics from which the adversaries to liberty derive their most specious declamations."
+      },
+      {
+        "id": "s4",
+        "score": 94.3,
+        "metrics": {
+          "words": 47,
+          "avgSyllables": 1.81,
+          "longWords": 11,
+          "commas": 4
+        },
+        "text": "The valuable improvements made by the American constitutions on the popular models, both ancient and modern, cannot certainly be too much admired; but it would be an unwarrantable partiality, to contend that they have as effectually obviated the danger on this side, as was wished and expected."
+      },
+      {
+        "id": "s5",
+        "score": 90.4,
+        "metrics": {
+          "words": 66,
+          "avgSyllables": 1.68,
+          "longWords": 15,
+          "commas": 6
+        },
+        "text": "Complaints are everywhere heard from our most considerate and virtuous citizens, equally the friends of public and private faith, and of public and personal liberty, that our governments are too unstable, that the peace of rival parties is too often determined, not according to the rules of justice and the rights of the minor party, but by the superior force of an interested and overbearing majority."
+      },
+      {
+        "id": "s7",
+        "score": 86.8,
+        "metrics": {
+          "words": 81,
+          "avgSyllables": 1.56,
+          "longWords": 11,
+          "commas": 9
+        },
+        "text": "It will be found, indeed, on a candid review of our situation, that some of the distresses under which we labor have been erroneously charged on the operation of our governments; but it will be found, at the same time, that other causes will not alone account for many of our heaviest misfortunes; and, particularly, for that prevailing and increasing distrust of public engagements, and alarm for private rights, which are echoed from one end of the continent to the other."
+      },
+      {
+        "id": "s0",
+        "score": 73.2,
+        "metrics": {
+          "words": 28,
+          "avgSyllables": 1.79,
+          "longWords": 7,
+          "commas": 1
+        },
+        "text": "Among the numerous advantages promised by a well constructed Union, none deserves to be more accurately developed than its tendency to break and control the violence of faction."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 0.23,
+    "fkgDiff": 0.03,
+    "sentenceCountDiff": 0,
+    "segmentationAligned": true,
+    "notes": "Sentence segmentation aligned closely with reference."
+  }
+}

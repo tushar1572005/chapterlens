@@ -1,0 +1,152 @@
+{
+  "passage01_peter_rabbit": {
+    "passageId": "passage01_peter_rabbit",
+    "filename": "passage01_peter_rabbit.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 76.76,
+    "fleschKincaidGrade": 6.3,
+    "wordCount": 241,
+    "sentenceCount": 16
+  },
+  "passage02_alice_in_wonderland": {
+    "passageId": "passage02_alice_in_wonderland",
+    "filename": "passage02_alice_in_wonderland.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 42.12,
+    "fleschKincaidGrade": 19.96,
+    "wordCount": 253,
+    "sentenceCount": 5
+  },
+  "passage03_sherlock_holmes": {
+    "passageId": "passage03_sherlock_holmes",
+    "filename": "passage03_sherlock_holmes.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 59.1,
+    "fleschKincaidGrade": 10.36,
+    "wordCount": 301,
+    "sentenceCount": 14
+  },
+  "passage04_pride_and_prejudice": {
+    "passageId": "passage04_pride_and_prejudice",
+    "filename": "passage04_pride_and_prejudice.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 84.21,
+    "fleschKincaidGrade": 4.63,
+    "wordCount": 301,
+    "sentenceCount": 24
+  },
+  "passage05_moby_dick": {
+    "passageId": "passage05_moby_dick",
+    "filename": "passage05_moby_dick.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 59.92,
+    "fleschKincaidGrade": 9.7,
+    "wordCount": 309,
+    "sentenceCount": 16
+  },
+  "passage06_frankenstein": {
+    "passageId": "passage06_frankenstein",
+    "filename": "passage06_frankenstein.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 55.47,
+    "fleschKincaidGrade": 12.37,
+    "wordCount": 303,
+    "sentenceCount": 11
+  },
+  "passage07_the_time_machine": {
+    "passageId": "passage07_the_time_machine",
+    "filename": "passage07_the_time_machine.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 68.69,
+    "fleschKincaidGrade": 6.79,
+    "wordCount": 288,
+    "sentenceCount": 23
+  },
+  "passage08_origin_of_species": {
+    "passageId": "passage08_origin_of_species",
+    "filename": "passage08_origin_of_species.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 57.44,
+    "fleschKincaidGrade": 11.94,
+    "wordCount": 350,
+    "sentenceCount": 13
+  },
+  "passage09_federalist_no_10": {
+    "passageId": "passage09_federalist_no_10",
+    "filename": "passage09_federalist_no_10.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 23.73,
+    "fleschKincaidGrade": 20.27,
+    "wordCount": 374,
+    "sentenceCount": 9
+  },
+  "passage10_declaration_of_independence": {
+    "passageId": "passage10_declaration_of_independence",
+    "filename": "passage10_declaration_of_independence.txt",
+    "referenceEngine": "textstat",
+    "textstatVersion": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 24.15,
+    "fleschKincaidGrade": 22.15,
+    "wordCount": 296,
+    "sentenceCount": 6
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "passage03_sherlock_holmes",
+  "filename": "passage03_sherlock_holmes.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 59.1,
+    "fleschKincaidGrade": 10.36,
+    "words": 301,
+    "sentences": 14
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 57.9,
+      "fkGrade": 10.6,
+      "label": "Fairly Difficult"
+    },
+    "stats": {
+      "sentences": 14,
+      "words": 304,
+      "paragraphs": 2
+    },
+    "top5SentenceIds": [
+      "s13",
+      "s4",
+      "s8",
+      "s9",
+      "s5"
+    ],
+    "hardest": [
+      {
+        "id": "s13",
+        "score": 85.3,
+        "metrics": {
+          "words": 80,
+          "avgSyllables": 1.51,
+          "longWords": 11,
+          "commas": 9
+        },
+        "text": "My own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while Holmes, who loathed every form of society with his whole Bohemian soul, remained in our lodgings in Baker Street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature."
+      },
+      {
+        "id": "s4",
+        "score": 73.3,
+        "metrics": {
+          "words": 16,
+          "avgSyllables": 1.81,
+          "longWords": 4,
+          "commas": 3
+        },
+        "text": "All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind."
+      },
+      {
+        "id": "s8",
+        "score": 69,
+        "metrics": {
+          "words": 33,
+          "avgSyllables": 1.67,
+          "longWords": 7,
+          "commas": 0
+        },
+        "text": "But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results."
+      },
+      {
+        "id": "s9",
+        "score": 67.6,
+        "metrics": {
+          "words": 31,
+          "avgSyllables": 1.35,
+          "longWords": 4,
+          "commas": 2
+        },
+        "text": "Grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his."
+      },
+      {
+        "id": "s5",
+        "score": 67.4,
+        "metrics": {
+          "words": 30,
+          "avgSyllables": 1.37,
+          "longWords": 3,
+          "commas": 3
+        },
+        "text": "He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 1.2,
+    "fkgDiff": 0.24,
+    "sentenceCountDiff": 0,
+    "segmentationAligned": true,
+    "notes": "Sentence segmentation aligned closely with reference."
+  }
+}

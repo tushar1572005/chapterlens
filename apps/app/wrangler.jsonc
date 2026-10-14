@@ -1,0 +1,29 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "chapterlens",
+	"main": "worker/index.js",
+	"compatibility_date": "2024-12-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"vars": {
+		"GROQ_MODEL": "openai/gpt-oss-120b",
+		"PER_IP_DAILY_LIMIT": "3",
+		"GLOBAL_DAILY_CAP": "100"
+	},
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS",
+		"not_found_handling": "single-page-application",
+		"run_worker_first": [
+			"/api/*"
+		]
+	},
+	"kv_namespaces": [
+		{
+			"binding": "REVIEW_CACHE",
+			"id": "d557b98d957d421faf8908de3833d58e",
+			"remote": true
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "passage01_peter_rabbit",
+  "filename": "passage01_peter_rabbit.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 76.76,
+    "fleschKincaidGrade": 6.3,
+    "words": 241,
+    "sentences": 16
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 72.7,
+      "fkGrade": 8.7,
+      "label": "Fairly Easy"
+    },
+    "stats": {
+      "sentences": 11,
+      "words": 245,
+      "paragraphs": 9
+    },
+    "top5SentenceIds": [
+      "s1",
+      "s6",
+      "s9",
+      "s7",
+      "s10"
+    ],
+    "hardest": [
+      {
+        "id": "s1",
+        "score": 78.1,
+        "metrics": {
+          "words": 59,
+          "avgSyllables": 1.27,
+          "longWords": 4,
+          "commas": 5
+        },
+        "text": "They lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n\"Now, my dears,\" said old Mrs. Rabbit one morning, \"you may go into the fields or down the lane, but don't go into Mr. McGregor's garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.\""
+      },
+      {
+        "id": "s6",
+        "score": 70.3,
+        "metrics": {
+          "words": 35,
+          "avgSyllables": 1.49,
+          "longWords": 2,
+          "commas": 7
+        },
+        "text": "Flopsy, Mopsy, and Cotton-tail, who were good little bunnies, went down the lane to gather blackberries; but Peter, who was very naughty, ran straight away to Mr. McGregor's garden, and squeezed under the gate!"
+      },
+      {
+        "id": "s9",
+        "score": 59.1,
+        "metrics": {
+          "words": 28,
+          "avgSyllables": 1.32,
+          "longWords": 2,
+          "commas": 3
+        },
+        "text": "Mr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, \"Stop thief!\""
+      },
+      {
+        "id": "s7",
+        "score": 52.6,
+        "metrics": {
+          "words": 27,
+          "avgSyllables": 1.3,
+          "longWords": 2,
+          "commas": 2
+        },
+        "text": "First he ate some lettuces and some French beans; and then he ate some radishes; and then, feeling rather sick, he went to look for some parsley."
+      },
+      {
+        "id": "s10",
+        "score": 44.8,
+        "metrics": {
+          "words": 21,
+          "avgSyllables": 1.38,
+          "longWords": 2,
+          "commas": 1
+        },
+        "text": "Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 4.06,
+    "fkgDiff": 2.4,
+    "sentenceCountDiff": -5,
+    "segmentationAligned": false,
+    "notes": "Sentence count diverged (our Intl.Segmenter: 11, textstat regex: 16) due to dialogue quotes/abbreviations."
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "passage07_the_time_machine",
+  "filename": "passage07_the_time_machine.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 68.69,
+    "fleschKincaidGrade": 6.79,
+    "words": 288,
+    "sentences": 23
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 67.5,
+      "fkGrade": 7.9,
+      "label": "Standard"
+    },
+    "stats": {
+      "sentences": 18,
+      "words": 291,
+      "paragraphs": 8
+    },
+    "top5SentenceIds": [
+      "s3",
+      "s4",
+      "s7",
+      "s13",
+      "s0"
+    ],
+    "hardest": [
+      {
+        "id": "s3",
+        "score": 82.5,
+        "metrics": {
+          "words": 34,
+          "avgSyllables": 1.59,
+          "longWords": 5,
+          "commas": 3
+        },
+        "text": "Our chairs, being his patents, embraced and caressed us rather than submitted to be sat upon, and there was that luxurious after-dinner atmosphere when thought runs gracefully free of the trammels of precision."
+      },
+      {
+        "id": "s4",
+        "score": 67.9,
+        "metrics": {
+          "words": 40,
+          "avgSyllables": 1.43,
+          "longWords": 6,
+          "commas": 0
+        },
+        "text": "And he put it to us in this way—marking the points with a lean forefinger—as we sat and lazily admired his earnestness over this new paradox (as we thought it) and his fecundity.\n\n\"You must follow me carefully."
+      },
+      {
+        "id": "s7",
+        "score": 66.5,
+        "metrics": {
+          "words": 36,
+          "avgSyllables": 1.5,
+          "longWords": 3,
+          "commas": 1
+        },
+        "text": "\"Is not that rather a large thing to expect us to begin upon?\" said Filby, an argumentative person with red hair.\n\n\"I do not mean to ask you to accept anything without reasonable ground for it."
+      },
+      {
+        "id": "s13",
+        "score": 54.8,
+        "metrics": {
+          "words": 21,
+          "avgSyllables": 1.38,
+          "longWords": 2,
+          "commas": 5
+        },
+        "text": "\"That is all right,\" said the Psychologist.\n\n\"Nor, having only length, breadth, and thickness, can a cube have a real existence.\""
+      },
+      {
+        "id": "s0",
+        "score": 51,
+        "metrics": {
+          "words": 20,
+          "avgSyllables": 1.45,
+          "longWords": 4,
+          "commas": 0
+        },
+        "text": "The Time Traveller (for so it will be convenient to speak of him) was expounding a recondite matter to us."
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 1.19,
+    "fkgDiff": 1.11,
+    "sentenceCountDiff": -5,
+    "segmentationAligned": false,
+    "notes": "Sentence count diverged (our Intl.Segmenter: 18, textstat regex: 23) due to dialogue quotes/abbreviations."
+  }
+}

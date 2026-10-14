@@ -1,0 +1,88 @@
+{
+  "id": "passage02_alice_in_wonderland",
+  "filename": "passage02_alice_in_wonderland.txt",
+  "reference": {
+    "engine": "textstat",
+    "version": [
+      0,
+      7,
+      13
+    ],
+    "language": "en_US",
+    "fleschReadingEase": 42.12,
+    "fleschKincaidGrade": 19.96,
+    "words": 253,
+    "sentences": 5
+  },
+  "golden": {
+    "readability": {
+      "fleschRE": 51.4,
+      "fkGrade": 16.7,
+      "label": "Fairly Difficult"
+    },
+    "stats": {
+      "sentences": 6,
+      "words": 257,
+      "paragraphs": 3
+    },
+    "top5SentenceIds": [
+      "s5",
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "hardest": [
+      {
+        "id": "s5",
+        "score": 79.9,
+        "metrics": {
+          "words": 109,
+          "avgSyllables": 1.33,
+          "longWords": 5,
+          "commas": 10
+        },
+        "text": "(when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge."
+      },
+      {
+        "id": "s0",
+        "score": 76.1,
+        "metrics": {
+          "words": 57,
+          "avgSyllables": 1.37,
+          "longWords": 3,
+          "commas": 4
+        },
+        "text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or conversations?\""
+      },
+      {
+        "id": "s1",
+        "score": 69,
+        "metrics": {
+          "words": 56,
+          "avgSyllables": 1.3,
+          "longWords": 2,
+          "commas": 3
+        },
+        "text": "So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her."
+      },
+      {
+        "id": "s2",
+        "score": 44.7,
+        "metrics": {
+          "words": 29,
+          "avgSyllables": 1.31,
+          "longWords": 1,
+          "commas": 1
+        },
+        "text": "There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself, \"Oh dear!"
+      }
+    ]
+  },
+  "comparison": {
+    "freDiff": 9.28,
+    "fkgDiff": 3.26,
+    "sentenceCountDiff": 1,
+    "segmentationAligned": true,
+    "notes": "Sentence segmentation aligned closely with reference."
+  }
+}

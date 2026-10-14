@@ -1,0 +1,17 @@
+{
+  "name": "chapterlens",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.11.2",
+  "scripts": {
+    "dev": "pnpm --filter @chapterlens/app dev",
+    "build": "pnpm --filter @chapterlens/app build",
+    "test": "pnpm -r test",
+    "eval": "vitest run evals/eval.test.js",
+    "eval:ai": "vitest run evals/eval-ai.test.js"
+  },
+  "devDependencies": {
+    "@chapterlens/analyzer": "workspace:*",
+    "vitest": "^5.0.4"
+  }
+}
