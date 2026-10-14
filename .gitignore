@@ -1,6 +1,17 @@
 node_modules
 dist
-.env
-.env.local
-.dev.vars
 .wrangler
+
+# Environment & secret files (protect local and production variants)
+.env
+.env.*
+.env*.local
+*.local
+!.env.example
+!.env.*.example
+
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+!.dev.vars.*.example
+

@@ -140,7 +140,8 @@ export default function AiReviewPanel({
             <p className="leading-relaxed">
               Your full chapter is analyzed locally in your browser. If you request an AI review, only
               the {eligibleSentences.length} highlighted sentence(s) and their immediate context will be sent
-              to the Groq AI service. No chapter text is permanently stored on the server.
+              to the Groq AI service. To avoid redundant AI calls, generated sentence rewrites are cached
+              securely for up to 7 days, after which they automatically expire. No other chapter text is retained.
             </p>
             <label className="flex items-start gap-2.5 pt-1 cursor-pointer select-none">
               <input

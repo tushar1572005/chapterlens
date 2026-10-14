@@ -53,8 +53,19 @@ export async function checkRateLimit(c) {
   const dateStr = getDailyDateString();
   const globalKey = `limit:global:${dateStr}`;
 
+  const rawIp = c.req.header('cf-connecting-ip') || c.req.header('x-real-ip') || '127.0.0.1';
+  const clientIp = rawIp.split(',')[0].trim();
+  const hashedIp = await hashIp(clientIp, salt);
+  const ipKey = `limit:ip:${dateStr}:${hashedIp}`;
+
+  // Fetch both counters concurrently to minimize latency & race conditions
+  const [rawGlobal, rawIpCount] = await Promise.all([
+    kv.get(globalKey),
+    kv.get(ipKey),
+  ]);
+
   // 1. Check global cap
-  const currentGlobal = parseInt((await kv.get(globalKey)) || '0', 10);
+  const currentGlobal = parseInt(rawGlobal || '0', 10);
   if (currentGlobal >= globalCap) {
     return {
       ok: false,
@@ -63,11 +74,7 @@ export async function checkRateLimit(c) {
   }
 
   // 2. Check per-IP limit
-  const clientIp = c.req.header('CF-Connecting-IP') || '127.0.0.1';
-  const hashedIp = await hashIp(clientIp, salt);
-  const ipKey = `limit:ip:${dateStr}:${hashedIp}`;
-
-  const currentIpCount = parseInt((await kv.get(ipKey)) || '0', 10);
+  const currentIpCount = parseInt(rawIpCount || '0', 10);
   if (currentIpCount >= ipLimit) {
     return {
       ok: false,
@@ -81,6 +88,7 @@ export async function checkRateLimit(c) {
 /**
  * Increments rate limit counters in KV with a 24h expiration TTL.
  * MUST only be called after a successful, uncached AI review.
+ * Propagates KV errors rather than silently swallowing counter failures.
  *
  * @param {Context} c
  */
@@ -88,25 +96,29 @@ export async function incrementRateLimit(c) {
   const kv = c.env.REVIEW_CACHE;
   if (!kv) return;
 
-  try {
-    const salt = requireEnv(c.env, 'IP_HASH_SALT');
-    const dateStr = getDailyDateString();
-    const globalKey = `limit:global:${dateStr}`;
+  const salt = requireEnv(c.env, 'IP_HASH_SALT');
+  const dateStr = getDailyDateString();
+  const globalKey = `limit:global:${dateStr}`;
 
-    const clientIp = c.req.header('CF-Connecting-IP') || '127.0.0.1';
-    const hashedIp = await hashIp(clientIp, salt);
-    const ipKey = `limit:ip:${dateStr}:${hashedIp}`;
+  const rawIp = c.req.header('cf-connecting-ip') || c.req.header('x-real-ip') || '127.0.0.1';
+  const clientIp = rawIp.split(',')[0].trim();
+  const hashedIp = await hashIp(clientIp, salt);
+  const ipKey = `limit:ip:${dateStr}:${hashedIp}`;
 
-    const TTL_24H = 86400;
+  const TTL_24H = 86400;
 
-    // Read and increment global
-    const currentGlobal = parseInt((await kv.get(globalKey)) || '0', 10);
-    await kv.put(globalKey, String(currentGlobal + 1), { expirationTtl: TTL_24H });
+  // Concurrent reads minimize window between check and increment
+  const [rawGlobal, rawIpCount] = await Promise.all([
+    kv.get(globalKey),
+    kv.get(ipKey),
+  ]);
 
-    // Read and increment IP
-    const currentIp = parseInt((await kv.get(ipKey)) || '0', 10);
-    await kv.put(ipKey, String(currentIp + 1), { expirationTtl: TTL_24H });
-  } catch (err) {
-    console.warn('Failed to increment rate limit counters:', err);
-  }
+  const currentGlobal = parseInt(rawGlobal || '0', 10);
+  const currentIp = parseInt(rawIpCount || '0', 10);
+
+  // Parallel writes with 24h TTL — do NOT swallow failures
+  await Promise.all([
+    kv.put(globalKey, String(currentGlobal + 1), { expirationTtl: TTL_24H }),
+    kv.put(ipKey, String(currentIp + 1), { expirationTtl: TTL_24H }),
+  ]);
 }

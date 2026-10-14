@@ -1,12 +1,35 @@
 import React, { useEffect, useRef, useImperativeHandle, forwardRef, useState } from 'react';
 
+export const DUMMY_TURNSTILE_SITE_KEY = '1x00000000000000000000AA';
+
+/**
+ * Resolves the effective Turnstile site key.
+ * Throws in production if missing or set to Cloudflare's dummy test key.
+ */
+export function resolveTurnstileSiteKey(customKey) {
+  const isProd = Boolean(import.meta.env?.PROD);
+  const key = customKey || import.meta.env?.VITE_TURNSTILE_SITE_KEY;
+
+  if (isProd) {
+    if (!key || key === DUMMY_TURNSTILE_SITE_KEY) {
+      throw new Error(
+        'Production deployment requires a valid VITE_TURNSTILE_SITE_KEY. Dummy Turnstile keys are prohibited in production.'
+      );
+    }
+    return key;
+  }
+
+  // Local development only fallback
+  return key || DUMMY_TURNSTILE_SITE_KEY;
+}
+
 /**
  * Cloudflare Turnstile CAPTCHA widget component.
  * Exposes a reset() imperative method to reset the widget after submit or failure.
  */
 const TurnstileWidget = forwardRef(function TurnstileWidget(
   {
-    siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || '1x00000000000000000000AA',
+    siteKey,
     onToken,
     onError,
     onExpire,
@@ -14,6 +37,7 @@ const TurnstileWidget = forwardRef(function TurnstileWidget(
   },
   ref
 ) {
+  const effectiveSiteKey = resolveTurnstileSiteKey(siteKey);
   const containerRef = useRef(null);
   const widgetIdRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -76,7 +100,7 @@ const TurnstileWidget = forwardRef(function TurnstileWidget(
 
     try {
       const id = window.turnstile.render(containerRef.current, {
-        sitekey: siteKey,
+        sitekey: effectiveSiteKey,
         callback: (token) => {
           if (onToken) onToken(token);
         },
@@ -103,7 +127,7 @@ const TurnstileWidget = forwardRef(function TurnstileWidget(
         widgetIdRef.current = null;
       }
     };
-  }, [isLoaded, siteKey, onToken, onError, onExpire]);
+  }, [isLoaded, effectiveSiteKey, onToken, onError, onExpire]);
 
   return (
     <div

@@ -20,11 +20,11 @@ app.all('/api/*', (c) => {
 
 // Global error handler
 app.onError((err, c) => {
-  console.error('Unhandled API Error:', err.message);
+  console.error('Unhandled API Error:', err);
   return c.json(
     {
       error: 'Internal Server Error',
-      message: err.message,
+      message: 'An unexpected error occurred. Please try again later.',
     },
     500
   );

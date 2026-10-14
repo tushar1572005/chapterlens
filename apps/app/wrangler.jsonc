@@ -23,7 +23,7 @@
 		{
 			"binding": "REVIEW_CACHE",
 			"id": "d557b98d957d421faf8908de3833d58e",
-			"remote": true
+			"remote": false
 		}
 	]
 }

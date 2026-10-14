@@ -6,9 +6,8 @@
  */
 export async function computeCacheKey(sentences) {
   const sorted = [...sentences].sort((a, b) => a.text.localeCompare(b.text));
-  const serialized = sorted
-    .map((s) => `${s.text}|||${s.context || ''}`)
-    .join('###');
+  // Unambiguous serialization preventing delimiter injection/collisions
+  const serialized = JSON.stringify(sorted.map((s) => [s.text, s.context || '']));
 
   const encoder = new TextEncoder();
   const data = encoder.encode(serialized);
