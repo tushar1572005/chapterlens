@@ -296,11 +296,11 @@ Blocked or failed requests **do not** increment rate-limit counters.
 
 | # | Task | Done when |
 |---|------|-----------|
-| 1 | `wrangler.jsonc` — KV namespace binding (ID from me), `assets.not_found_handling: "single-page-application"`, `run_worker_first: ["/api/*"]`, compatibility date. Verify no request-body logging or observability settings that capture chapter text. | `pnpm --filter app build && wrangler deploy --dry-run` succeeds |
-| 2 | `.dev.vars.example` with `GROQ_API_KEY=<paste-here>`, `TURNSTILE_SECRET=<paste-here>`, `IP_HASH_SALT=<paste-here>` | File committed |
-| 3 | `.env.example` with `VITE_TURNSTILE_SITE_KEY=<paste-here>` | File committed |
-| 4 | GitHub Actions workflow: install pnpm, `pnpm install`, `pnpm test`, `pnpm eval`, build with `VITE_TURNSTILE_SITE_KEY` from GH vars, `wrangler deploy` (on `main` push). Does **not** run `pnpm eval:ai`. | Workflow YAML committed |
-| 5 | `README.md` — project summary, local dev instructions, architecture diagram, env var table, note on `pnpm eval:ai` | README exists at root |
+| [x] 1 | `wrangler.jsonc` — KV namespace binding (ID from me), `assets.not_found_handling: "single-page-application"`, `run_worker_first: ["/api/*"]`, compatibility date. Verify no request-body logging or observability settings that capture chapter text. | `pnpm --filter app build && wrangler deploy --dry-run` succeeds |
+| [x] 2 | `.dev.vars.example` with `GROQ_API_KEY=<paste-here>`, `TURNSTILE_SECRET=<paste-here>`, `IP_HASH_SALT=<paste-here>` | File committed |
+| [x] 3 | `.env.example` with `VITE_TURNSTILE_SITE_KEY=<paste-here>` | File committed |
+| [x] 4 | GitHub Actions workflow: install pnpm, `pnpm install`, `pnpm test`, `pnpm eval`, build with `VITE_TURNSTILE_SITE_KEY` from GH vars, `wrangler deploy` (on `main` push). Does **not** run `pnpm eval:ai`. | Workflow YAML committed |
+| [x] 5 | `README.md` — project summary, local dev instructions, architecture diagram, env var table, note on `pnpm eval:ai` | README exists at root |
 
 **Browser check:** deploy to `*.workers.dev`, paste text, run AI Review, verify end-to-end.
 

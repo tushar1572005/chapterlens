@@ -1,0 +1,3 @@
+GROQ_API_KEY=<paste-here>
+TURNSTILE_SECRET=<paste-here>
+IP_HASH_SALT=<paste-here>

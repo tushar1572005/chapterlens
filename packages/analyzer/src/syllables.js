@@ -1,5 +1,8 @@
 import { syllable } from 'syllable';
 
+const syllableCache = new Map();
+const MAX_CACHE_ENTRIES = 5000;
+
 /**
  * Counts the syllables in a given word.
  * Strips surrounding punctuation and cleans input before counting.
@@ -18,7 +21,19 @@ export function countSyllables(word) {
     return 0;
   }
 
-  const count = syllable(cleanWord);
-  // Any word with letters should have at least 1 syllable
-  return count > 0 ? count : 1;
+  const lower = cleanWord.toLowerCase();
+  const cached = syllableCache.get(lower);
+  if (cached !== undefined) {
+    return cached;
+  }
+
+  const count = syllable(lower);
+  const result = count > 0 ? count : 1;
+
+  if (syllableCache.size >= MAX_CACHE_ENTRIES) {
+    syllableCache.clear();
+  }
+  syllableCache.set(lower, result);
+
+  return result;
 }
