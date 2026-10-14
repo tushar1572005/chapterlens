@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { Sparkles, Shield, AlertCircle, Copy, Check, Info, Lock } from 'lucide-react';
 import TurnstileWidget from './TurnstileWidget.jsx';
 
@@ -31,6 +31,19 @@ export default function AiReviewPanel({
   const [turnstileToken, setTurnstileToken] = useState('');
   const [copiedId, setCopiedId] = useState(null);
   const turnstileRef = useRef(null);
+
+  // Stabilize Turnstile event callbacks to avoid unnecessary widget recreations
+  const handleTurnstileToken = useCallback((token) => {
+    setTurnstileToken(token);
+  }, []);
+
+  const handleTurnstileError = useCallback(() => {
+    setTurnstileToken('');
+  }, []);
+
+  const handleTurnstileExpire = useCallback(() => {
+    setTurnstileToken('');
+  }, []);
 
   // Filter out any sentences marked tooLongForAi (> 2000 chars)
   const eligibleSentences = sentences.filter((s) => !s.tooLongForAi);
@@ -161,9 +174,9 @@ export default function AiReviewPanel({
           <div className="flex justify-center">
             <TurnstileWidget
               ref={turnstileRef}
-              onToken={(token) => setTurnstileToken(token)}
-              onError={() => setTurnstileToken('')}
-              onExpire={() => setTurnstileToken('')}
+              onToken={handleTurnstileToken}
+              onError={handleTurnstileError}
+              onExpire={handleTurnstileExpire}
             />
           </div>
 
